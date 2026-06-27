@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Money Tracking</title>
+  <link rel="stylesheet" href="Style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <style>
+  </style>
+
+  <div class="container">
+
+    <div>
+
+      <!-- Head line -->
+      <h1>Expense Tracker</h1>
+
+
+      <!-- First box Enter name and Total money -->
+      <div class="first_bar">
+
+        <!-- Enter name section -->
+        <div class="form-section">
+          <label for="employeeName">Enter your Name:</label>
+          <input type="text" id="employeeName" placeholder="Enter your name">
+        </div>
+
+        <!-- enter maoney section -->
+        <div class="form-section">
+          <label for="salary">Monthly Money:</label>
+          <input type="number" id="salary" placeholder="Enter your salary">
+        </div>
+      </div>
+
+
+      <!-- second box Enter itemsname and expend money -->
+      <div class="second">
+        <div class="form-section">
+
+          <!-- enter items name -->
+          <label for="itemName">Expense Item:</label>
+          <input type="text" id="itemName" placeholder="Enter item name">
+        </div>
+
+        <!-- enter Amount -->
+        <div class="form-section">
+          <label for="amount">Amount Spent:</label>
+          <input type="number" id="amount" placeholder="Enter amount">
+        </div>
+      </div>
+      <button class="btn" onclick="addExpense()">Add Expense</button>
+    </div>
+
+
+    <div>
+      <div class="expenses-list">
+        <h3>Expenses for the Month</h3>
+        <table id="expenseTable">
+          <thead>
+            <tr>
+              <th>Item Name</th>
+              <th>Amount &#8377 </th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="chart-container">
+        <canvas id="expenseChart"></canvas>
+      </div>
+      <div class="expenses-summary">
+        <h3>Total Salary Reminder</h3>
+        <div class="total_bar">
+          <p>Total Salary: <span id="totalSalary">0</span></p>
+          <p>Total Expenses: <span id="totalExpenses">0</span></p>
+          <p>Remaining Salary: <span id="remainingSalary">0</span></p>
+        </div>
+      </div>
+      <div class="export-btn" onclick="exportData()">Export to Excel</div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+
+  <script src="App.js"></script>
+</body>
+
+</html>
