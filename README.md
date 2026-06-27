@@ -1,4 +1,4 @@
-# 📊 Expense Tracker Web Application
+# 📊 Expense Tracker Web Application 
 
 A responsive Expense Tracker Web Application built using HTML, CSS, and JavaScript. This project helps users manage their monthly income and expenses with real-time calculations, data visualization, and Excel export functionality.
 
